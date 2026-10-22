@@ -34,7 +34,7 @@ function embaralhar(lista) {
 function criarIcone(nome) {
   const imagem = document.createElement("img");
   imagem.classList.add("card__icon");
-  imagem.src = `/images/${nome}.png`;
+  imagem.src = `/imagens/${nome}.png`;
   imagem.alt = "";
   imagem.draggable = false;
   imagem.setAttribute("aria-hidden", "true");
