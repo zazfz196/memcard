@@ -92,7 +92,8 @@ body{
   background: #7b5a91;
 }
 .card .front-view img{
-  width: 19px;
+  width: 48px;
+  mix-blend-mode: screen;
 }
 .card .back-view img{
   max-width: 45px;
@@ -116,7 +117,7 @@ body{
     width: 350px;
   }
   .card .front-view img{
-    width: 17px;
+    width: 44px;
   }
   .card .back-view img{
     max-width: 40px;
@@ -128,7 +129,7 @@ body{
     width: 300px;
   }
   .card .front-view img{
-    width: 15px;
+    width: 40px;
   }
   .card .back-view img{
     max-width: 35px;
