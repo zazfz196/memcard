@@ -1,0 +1,1 @@
+os recursos que eu adicionei foram: um cronomêtro que conta o tempo da rodada atual, e um marcador de recorde, que marca o menor tempo marcado em alguma rodada na seção atual. o contador de recorde reseta quando a página é atualizada
