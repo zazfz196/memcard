@@ -1,9 +1,9 @@
+// Seleciona todas as cartas.
 const cards = document.querySelectorAll(".card");
-
 let matched = 0;
 let cardOne, cardTwo;
 let disableDeck = false;
-
+// Inicia a comparação das cartas.
 function flipCard({target: clickedCard}) {
     if(cardOne !== clickedCard && !disableDeck) {
         clickedCard.classList.add("flip");
@@ -17,7 +17,7 @@ function flipCard({target: clickedCard}) {
         matchCards(cardOneImg, cardTwoImg);
     }
 }
-
+// Compara as duas imagens.
 function matchCards(img1, img2) {
     if(img1 === img2) {
         matched++;
@@ -32,10 +32,10 @@ function matchCards(img1, img2) {
         return disableDeck = false;
     }
     setTimeout(() => {
+        // Marca as cartas que não combinam.
         cardOne.classList.add("shake");
         cardTwo.classList.add("shake");
     }, 400);
-
     setTimeout(() => {
         cardOne.classList.remove("shake", "flip");
         cardTwo.classList.remove("shake", "flip");
@@ -43,7 +43,7 @@ function matchCards(img1, img2) {
         disableDeck = false;
     }, 1200);
 }
-
+// Embaralha e reinicia as cartas.
 function shuffleCard() {
     matched = 0;
     disableDeck = false;
@@ -57,9 +57,9 @@ function shuffleCard() {
         card.addEventListener("click", flipCard);
     });
 }
-
+// Começa a primeira rodada.
 shuffleCard();
-    
+// Ativa o clique em cada carta.
 cards.forEach(card => {
     card.addEventListener("click", flipCard);
 });

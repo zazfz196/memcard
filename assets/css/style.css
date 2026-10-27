@@ -1,28 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* Remove padrões do navegador. */
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+/* Centraliza o tabuleiro. */
 body{
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #6563FF;
+  background: #f3eff6;
 }
 .wrapper{
   padding: 25px;
   border-radius: 10px;
-  background: #F8F8F8;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  background: #faf8fc;
+  box-shadow: 0 10px 30px rgba(58, 42, 70, 0.12);
 }
 .cards, .card, .view{
   display: flex;
   align-items: center;
   justify-content: center;
 }
+/* Organiza as 16 cartas. */
 .cards{
   height: 400px;
   width: 400px;
@@ -39,6 +42,7 @@ body{
   height: calc(100% / 4 - 10px);
   width: calc(100% / 4 - 10px);
 }
+/* Sinaliza uma jogada errada. */
 .card.shake{
   animation: shake 0.35s ease-in-out;
 }
@@ -59,16 +63,20 @@ body{
     transform: translateX(8px);
   }
 }
+/* Sobrepõe as faces da carta. */
 .card .view{
   width: 100%;
   height: 100%;
   position: absolute;
   border-radius: 7px;
-  background: #fff;
+  background: #e5dcec;
   pointer-events: none;
   backface-visibility: hidden;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 10px rgba(58, 42, 70, 0.10);
   transition: transform 0.25s linear;
+}
+.card .front-view{
+  background: #7b5a91;
 }
 .card .front-view img{
   width: 19px;
@@ -76,9 +84,11 @@ body{
 .card .back-view img{
   max-width: 45px;
 }
+/* Esconde a forma inicialmente. */
 .card .back-view{
   transform: rotateY(-180deg);
 }
+/* Revela a carta virada. */
 .card.flip .back-view{
   transform: rotateY(0);
 }
@@ -86,6 +96,7 @@ body{
   transform: rotateY(180deg);
 }
 
+/* Ajusta o tabuleiro em telas menores. */
 @media screen and (max-width: 700px) {
   .cards{
     height: 350px;
@@ -98,7 +109,6 @@ body{
     max-width: 40px;
   }
 }
-
 @media screen and (max-width: 530px) {
   .cards{
     height: 300px;
