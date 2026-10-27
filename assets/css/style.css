@@ -20,6 +20,19 @@ body{
   background: #faf8fc;
   box-shadow: 0 10px 30px rgba(58, 42, 70, 0.12);
 }
+.game-info{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+  color: #4c365c;
+  font-size: 14px;
+}
+.game-info span{
+  color: #5c3b6e;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
 .cards, .card, .view{
   display: flex;
   align-items: center;
